@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Fees</title>
+
+<link rel="stylesheet"
+href="css/fees.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="left">
+
+<a href="dashboard.html">
+
+<span class="material-icons">
+
+arrow_back
+
+</span>
+
+</a>
+
+<h2>
+
+School Fees
+
+</h2>
+
+</div>
+
+</header>
+
+<section class="student-card">
+
+<img
+id="studentImage"
+src="assets/images/profile-placeholder.png"
+class="student-photo">
+
+<div>
+
+<h2 id="studentName">
+
+Loading...
+
+</h2>
+
+<p>
+
+Student ID :
+<span id="studentID">
+
+Loading...
+
+</span>
+
+</p>
+
+<p>
+
+Class :
+<span id="studentClass">
+
+Loading...
+
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+<section class="fee-summary">
+
+<div class="fee-card">
+
+<h3>
+
+Fee Status
+
+</h3>
+
+<h1 id="feeStatus">
+
+Loading...
+
+</h1>
+
+</div>
+
+<div class="fee-card">
+
+<h3>
+
+Amount
+
+</h3>
+
+<h1 id="feeAmount">
+
+₹ 0
+
+</h1>
+
+</div>
+
+<div class="fee-card">
+
+<h3>
+
+Due Date
+
+</h3>
+
+<h1 id="dueDate">
+
+--
+
+</h1>
+
+</div>
+
+</section>
+<a href="qr.html">
+<section class="payment-section">
+  
+
+<button id="payNow">
+
+Pay Fees
+
+</button>
+</a>
+<button id="downloadReceipt">
+
+Download Receipt
+
+</button>
+
+</section>
+
+<section class="history">
+
+<h2>
+
+Payment History
+
+</h2>
+
+<div id="historyContainer">
+
+<!-- Filled by fees.js -->
+
+</div>
+
+</section>
+
+<nav class="bottom-nav">
+
+<a href="dashboard.html">
+
+<span class="material-icons">
+
+home
+
+</span>
+
+</a>
+
+<a href="homework.html">
+
+<span class="material-icons">
+
+menu_book
+
+</span>
+
+</a>
+
+<a href="attendance.html">
+
+<span class="material-icons">
+
+fact_check
+
+</span>
+
+</a>
+
+<a href="profile.html">
+
+<span class="material-icons">
+
+person
+
+</span>
+
+</a>
+
+<a href="fees.html"
+class="active">
+
+<span class="material-icons">
+
+payments
+
+</span>
+
+</a>
+
+</nav>
+
+<script src="js/database.js"></script>
+
+<script src="js/fees.js"></script>
+
+</body>
+
+</html>

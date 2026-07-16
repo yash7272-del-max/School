@@ -1,0 +1,162 @@
+/* ==========================================
+   School ERP
+   File : css/profile.css
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef5ff;
+    padding-top:80px;
+    padding-bottom:90px;
+}
+
+/* Top Bar */
+
+.topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+    z-index:1000;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.left a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* Profile Header */
+
+.profile-header{
+    margin:20px;
+    padding:30px;
+    background:linear-gradient(135deg,#1976D2,#42A5F5);
+    border-radius:25px;
+    color:#fff;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.profile-photo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid #fff;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.profile-header h2{
+    margin-bottom:8px;
+}
+
+/* Detail Cards */
+
+.profile-details{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.detail-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    animation:fadeUp .5s ease;
+}
+
+.detail-card h3{
+    color:#1565C0;
+    margin-bottom:15px;
+    border-bottom:2px solid #E3F2FD;
+    padding-bottom:10px;
+}
+
+.detail-card p{
+    margin:12px 0;
+    font-size:15px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.detail-card strong{
+    color:#1565C0;
+}
+
+/* Bottom Navigation */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:#fff;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 -5px 15px rgba(0,0,0,.12);
+}
+
+.bottom-nav a{
+    color:#1565C0;
+    text-decoration:none;
+}
+
+.bottom-nav .active{
+    color:#0D47A1;
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.profile-header{
+    padding:20px;
+}
+
+.profile-photo{
+    width:100px;
+    height:100px;
+}
+
+.detail-card p{
+    flex-direction:column;
+    gap:5px;
+}
+
+}

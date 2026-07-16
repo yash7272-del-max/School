@@ -1,0 +1,221 @@
+/* ==========================================
+   School ERP
+   File : css/style.css
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  
+  justify-content: center;
+  
+  align-items: center;
+  
+  overflow: hidden;
+  
+  background: linear-gradient(-45deg, #0D47A1, #1565C0, #1E88E5, #64B5F6);
+  
+  background-size: 400% 400%;
+  
+  animation: bgMove 10s infinite;
+  
+}
+
+.splash-screen {
+  
+  width: 90%;
+  max-width: 420px;
+  
+  padding: 40px;
+  
+  text-align: center;
+  
+  border-radius: 25px;
+  
+  background: rgba(255, 255, 255, .15);
+  
+  backdrop-filter: blur(20px);
+  
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .2);
+  
+  animation: popup 1s ease;
+  
+}
+
+.logo {
+  
+  width: 140px;
+  
+  height: 140px;
+  
+  object-fit: contain;
+  
+  animation: logoFloat 3s ease-in-out infinite;
+  
+}
+
+h1 {
+  
+  margin-top: 20px;
+  
+  color: white;
+  
+  font-size: 36px;
+  
+  font-weight: 700;
+  
+}
+
+p {
+  
+  margin-top: 10px;
+  
+  color: #E3F2FD;
+  
+  font-size: 17px;
+  
+}
+
+.loader {
+  
+  width: 70px;
+  
+  height: 70px;
+  
+  margin: 35px auto 0;
+  
+  border: 6px solid rgba(255, 255, 255, .3);
+  
+  border-top: 6px solid white;
+  
+  border-radius: 50%;
+  
+  animation: spin 1s linear infinite;
+  
+}
+
+/* Animations */
+
+@keyframes spin {
+  
+  100% {
+    
+    transform: rotate(360deg);
+    
+  }
+  
+}
+
+@keyframes popup {
+  
+  from {
+    
+    opacity: 0;
+    
+    transform: scale(.8);
+    
+  }
+  
+  to {
+    
+    opacity: 1;
+    
+    transform: scale(1);
+    
+  }
+  
+}
+
+@keyframes logoFloat {
+  
+  0% {
+    
+    transform: translateY(0);
+    
+  }
+  
+  50% {
+    
+    transform: translateY(-15px);
+    
+  }
+  
+  100% {
+    
+    transform: translateY(0);
+    
+  }
+  
+}
+
+@keyframes bgMove {
+  
+  0% {
+    
+    background-position: 0% 50%;
+    
+  }
+  
+  50% {
+    
+    background-position: 100% 50%;
+    
+  }
+  
+  100% {
+    
+    background-position: 0% 50%;
+    
+  }
+  
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+  
+  .splash-screen {
+    
+    padding: 25px;
+    
+  }
+  
+  .logo {
+    
+    width: 100px;
+    
+    height: 100px;
+    
+  }
+  
+  h1 {
+    
+    font-size: 28px;
+    
+  }
+  
+  p {
+    
+    font-size: 15px;
+    
+  }
+  
+  .loader {
+    
+    width: 55px;
+    
+    height: 55px;
+    
+  }
+  
+}

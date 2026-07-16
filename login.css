@@ -1,0 +1,205 @@
+/* ==========================================
+   School ERP
+   File : css/login.css
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0D47A1,#1565C0,#42A5F5,#90CAF9);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+}
+
+.background-animation{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.background-animation::before,
+.background-animation::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    filter:blur(30px);
+    animation:float 8s ease-in-out infinite alternate;
+}
+
+.background-animation::before{
+    top:-120px;
+    left:-120px;
+}
+
+.background-animation::after{
+    right:-120px;
+    bottom:-120px;
+}
+
+.login-container{
+    width:92%;
+    max-width:420px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    animation:popup .8s ease;
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    object-fit:contain;
+    animation:rotateLogo 6s linear infinite;
+}
+
+.logo-section h1{
+    color:#fff;
+    margin-top:12px;
+    font-size:30px;
+}
+
+.logo-section p{
+    color:#E3F2FD;
+    margin:8px 0 25px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius:15px;
+    padding:0 12px;
+    margin-bottom:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.input-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:16px 10px;
+    font-size:16px;
+}
+
+.material-icons{
+    color:#1976D2;
+}
+
+.eye{
+    cursor:pointer;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.options a{
+    color:#fff;
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+    border:none;
+    border-radius:15px;
+    padding:16px;
+    font-size:18px;
+    font-weight:600;
+    background:#fff;
+    color:#1565C0;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+    background:#E3F2FD;
+}
+
+.demo-login{
+    margin-top:25px;
+    color:#fff;
+    background:rgba(255,255,255,.12);
+    border-radius:15px;
+    padding:15px;
+}
+
+.footer{
+    margin-top:20px;
+    color:#fff;
+    font-size:13px;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes rotateLogo{
+    100%{
+        transform:rotateY(360deg);
+    }
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(50px);
+    }
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@media(max-width:600px){
+    .login-container{
+        padding:25px;
+    }
+
+    .logo{
+        width:90px;
+        height:90px;
+    }
+
+    .logo-section h1{
+        font-size:24px;
+    }
+
+    button{
+        font-size:16px;
+    }
+}
